@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8b0b565d40527c4d9c66ce94151e148, type: 3}
+  m_Name: SendClickedPublisher
+  m_EditorClassIdentifier: Aniki.Common::Aniki.Common.ChannelPublisherSO
+  guid: c08c50d38ec5686448d0cab972b33cd6
+  channel:
+    target: {fileID: 11400000, guid: af9e1fc8f6b232e4c9be35820a1d5440, type: 2}

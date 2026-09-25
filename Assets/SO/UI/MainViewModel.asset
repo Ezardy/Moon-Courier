@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb8b11c7478cab7459fdc91879853d83, type: 3}
+  m_Name: MainViewModel
+  m_EditorClassIdentifier: Aniki.UI::Aniki.UI.MainViewModelSO
+  guid: 8e941eb0ed19b04459eb28ccc48d237f
+  view:
+    target: {fileID: 11400000, guid: 39c03bde6e3f0c646b8ffaadee1eef95, type: 2}
+  mapClickedChannelPublisher:
+    target: {fileID: 11400000, guid: d645987509345524ba2daad811ae9ee1, type: 2}
+  inventoryCloseClickedChannelPublisher:
+    target: {fileID: 11400000, guid: 429ea6b1647bc4542a724aeb68e75500, type: 2}
+  mapCloseClickedChannelPublisher:
+    target: {fileID: 11400000, guid: 317125a75b16cc24f92be71ec6008a98, type: 2}
+  cargoClickedChannelSubscriber:
+    target: {fileID: 11400000, guid: b229ffc3fb85c004480cb91104e371cf, type: 2}
+  mapOpenAnimationEndedSubscriber:
+    target: {fileID: 11400000, guid: 60ae93c9e2b37b04ab0750e0031ad0b4, type: 2}
+  mapCloseAnimationEndedSubscriber:
+    target: {fileID: 11400000, guid: 7e16b104a94878644a5bd134dc459464, type: 2}

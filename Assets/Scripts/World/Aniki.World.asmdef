@@ -1,0 +1,17 @@
+{
+    "name": "Aniki.World",
+    "rootNamespace": "Aniki.World",
+    "references": [
+        "Aniki.Common",
+        "UOP1.StateMachine"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

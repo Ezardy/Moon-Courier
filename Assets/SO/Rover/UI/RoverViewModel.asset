@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eab4620568704524c995bf0aebdc6020, type: 3}
+  m_Name: RoverViewModel
+  m_EditorClassIdentifier: Aniki.UI::Aniki.Rover.RoverViewModelSO
+  guid: a4735cf1548d5eb45a88c2f7702d03d4
+  roverView:
+    target: {fileID: 11400000, guid: b01c5a2ad5251c24d974c618e842c924, type: 2}
+  warehouseInventory:
+    target: {fileID: 11400000, guid: 2497e5609a3faba49995c3faa6a27ba9, type: 2}
+  cargoClickedGlobalPublisher:
+    target: {fileID: 11400000, guid: b229ffc3fb85c004480cb91104e371cf, type: 2}
+  sendClickedLocalPublisher:
+    target: {fileID: 11400000, guid: c08c50d38ec5686448d0cab972b33cd6, type: 2}
+  closeInventoryClickedSubscriber:
+    target: {fileID: 11400000, guid: 429ea6b1647bc4542a724aeb68e75500, type: 2}

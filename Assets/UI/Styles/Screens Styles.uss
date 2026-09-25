@@ -1,0 +1,10 @@
+:root {
+}
+
+.lasers-progress-bar .unity-progress-bar__progress {
+    background-color: rgba(255, 0, 0, 0.686);
+}
+
+.screen {
+    flex-grow: 1;
+}

@@ -1,0 +1,43 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Rover%20Controls/Rover%20Controls%20Styles.uss?fileID=7433441132597879392&amp;guid=0debeee03a4a84b4c9741d02764d0f83&amp;type=3#Rover Controls Styles"/>
+    <Style src="project://database/Assets/UI/Styles/Common.uss?fileID=7433441132597879392&amp;guid=718521826df899e4386e2aa1d52474c1&amp;type=3#Common"/>
+    <Style src="project://database/Assets/UI/Styles/Progress%20Bar.uss?fileID=7433441132597879392&amp;guid=a9d2375ede54db84e8fdd0728f2dc9c6&amp;type=3#Progress Bar"/>
+    <Style src="project://database/Assets/UI/Styles/Icon%20Label.uss?fileID=7433441132597879392&amp;guid=430d89ae2778d4240af25e24aab6d05d&amp;type=3#Icon Label"/>
+    <ui:VisualElement picking-mode="Ignore" data-source-type="Aniki.Rover.RoverViewModel, Aniki.UI" class="info-text" style="flex-grow: 1; flex-direction: column; justify-content: center; align-items: stretch; align-self: stretch; background-color: rgba(0, 0, 0, 0.271);">
+        <ui:Button text="cargo" name="rover-controls__cargo" enabled="true" class="rover-controls__button rover-controls__cargo" style="flex-shrink: 1; flex-grow: 1; height: 23%; -unity-text-auto-size: best-fit 10px 100px; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;"/>
+        <ui:VisualElement name="rover-stats" style="align-self: stretch; height: 96%;">
+            <Aniki.UI.IconProgressBar icon="project://database/Assets/Sprites/UI/lifting%20capacity.png?fileID=2800000&amp;guid=2ce2281420da244458d51910c9069699&amp;type=3#lifting capacity" high-value="8" value="5" name="rover-stats__capacity-progress-bar" class="capacity-progress-bar rover-stats__progress-bar">
+                <Bindings>
+                    <ui:DataBinding property="HighValue" data-source-path="WeightCapacity" binding-mode="ToTarget"/>
+                    <ui:DataBinding property="Value" data-source-path="Weight" binding-mode="ToTarget"/>
+                </Bindings>
+            </Aniki.UI.IconProgressBar>
+            <Aniki.UI.IconProgressBar icon="project://database/Assets/Sprites/UI/battery.png?fileID=2800000&amp;guid=c2d54d64c0dac3140b25762030944afd&amp;type=3#battery" high-value="100" value="32" name="rover-stats__battery-progress-bar" class="battery-progress-bar rover-stats__progress-bar">
+                <Bindings>
+                    <ui:DataBinding property="HighValue" data-source-path="BatteryCapacity" binding-mode="ToTarget"/>
+                    <ui:DataBinding property="Value" data-source-path="Battery" binding-mode="ToTarget"/>
+                </Bindings>
+            </Aniki.UI.IconProgressBar>
+        </ui:VisualElement>
+        <ui:VisualElement name="rover-controls" picking-mode="Ignore" style="flex-direction: column; align-self: stretch; justify-content: space-around; align-items: center; flex-grow: 1; margin-top: 7px; height: 50%;">
+            <ui:VisualElement name="rover-controls-send" style="flex-direction: row; align-items: center; justify-content: center; align-self: stretch;">
+                <ui:VisualElement name="rover-controls__consumption" class="rover-controls__consumption" style="flex-grow: 1; width: 87%;">
+                    <ui:Label text="2/km" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;">
+                        <Bindings>
+                            <ui:DataBinding property="text" data-source-path="Consumption" binding-mode="ToTarget" source-to-ui-converters="F1 per km"/>
+                        </Bindings>
+                    </ui:Label>
+                </ui:VisualElement>
+                <ui:Button text="Send" name="rover-controls__send" enabled="true" class="rover-controls__button rover-controls__send" style="flex-shrink: 1; flex-grow: 1; height: 100%; -unity-text-auto-size: best-fit 10px 100px; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;"/>
+                <Aniki.UI.IconLabel icon="project://database/Assets/Sprites/UI/energy.png?fileID=2800000&amp;guid=1de9d92c4ba38424b9d0d0e52e4ed07a&amp;type=3#energy" label="34" name="rover-controls__power-for-path" class="rover-controls__consumption" style="flex-grow: 1; height: 79%;">
+                    <Bindings>
+                        <ui:DataBinding property="Label" data-source-path="SendPrice" binding-mode="ToTarget"/>
+                    </Bindings>
+                </Aniki.UI.IconLabel>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <Bindings>
+            <ui:DataBinding property="style.display" data-source-path="IsShown" binding-mode="ToTarget" source-to-ui-converters="Display"/>
+        </Bindings>
+    </ui:VisualElement>
+</ui:UXML>

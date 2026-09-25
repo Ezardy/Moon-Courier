@@ -1,0 +1,19 @@
+{
+    "name": "Aniki.UI",
+    "rootNamespace": "Aniki.UI",
+    "references": [
+        "GUID:041e0704a7752b64094259dfbe1c0288",
+        "GUID:361b0385d62d45041b733307304be3a7",
+        "GUID:f7c113b66ff963247a2fdad952ff86a3",
+        "GUID:2e3edf90b6469524e89b435f4db0e4ef"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

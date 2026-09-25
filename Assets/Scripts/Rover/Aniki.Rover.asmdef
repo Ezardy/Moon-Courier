@@ -1,0 +1,19 @@
+{
+    "name": "Aniki.Rover",
+    "rootNamespace": "Aniki.Rover",
+    "references": [
+        "GUID:041e0704a7752b64094259dfbe1c0288",
+        "GUID:f7c113b66ff963247a2fdad952ff86a3",
+        "GUID:21d1eb854b91ade49bc69a263d12bee2",
+        "GUID:14237112ec2f3d843ab5e70197746ae6"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

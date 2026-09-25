@@ -1,0 +1,39 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Styles/Screens%20Styles.uss?fileID=7433441132597879392&amp;guid=ea72a853f9301d54f8c86ba5953d17f9&amp;type=3#Screens Styles"/>
+    <Style src="project://database/Assets/UI/Styles/Common.uss?fileID=7433441132597879392&amp;guid=718521826df899e4386e2aa1d52474c1&amp;type=3#Common"/>
+    <Style src="project://database/Assets/UI/Styles/Progress%20Bar.uss?fileID=7433441132597879392&amp;guid=a9d2375ede54db84e8fdd0728f2dc9c6&amp;type=3#Progress Bar"/>
+    <ui:VisualElement data-source-type="Aniki.UI.MainViewModel, Aniki.UI" picking-mode="Ignore" class="screen">
+        <ui:VisualElement name="base-screen" picking-mode="Ignore" class="screen">
+            <ui:ProgressBar name="lasers_power" data-source="project://database/Assets/SO/Laser/LasersPower.asset?fileID=11400000&amp;guid=383261d595230bd40a4261d69a38ba8c&amp;type=2#LasersPower" title="lasers power" class="info-text lasers-progress-bar" style="height: 9%;">
+                <Bindings>
+                    <ui:DataBinding property="highValue" data-source-path="goalPower" binding-mode="ToTarget"/>
+                    <ui:DataBinding property="value" data-source-path="Power" binding-mode="ToTarget"/>
+                </Bindings>
+            </ui:ProgressBar>
+            <ui:VisualElement picking-mode="Ignore" style="flex-grow: 1; align-self: stretch;">
+                <ui:Label text="until impact" name="impact__description" class="info-text" style="-unity-text-auto-size: best-fit 0 100px; height: 3%; color: rgb(233, 233, 233); margin-top: 5px; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;"/>
+                <ui:Label text="05:11" name="impact__countdown" class="info-text" style="height: 11%; -unity-text-auto-size: best-fit 10px 100px; color: rgb(255, 199, 55); margin-top: 4px; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;">
+                    <Bindings>
+                        <ui:DataBinding property="text" data-source-path="RemainingTime" data-source="project://database/Assets/SO/World/TimeUntilImpact.asset?fileID=11400000&amp;guid=144682faa773ccd4089939f9c2258065&amp;type=2#TimeUntilImpact" binding-mode="ToTarget" source-to-ui-converters="Time"/>
+                    </Bindings>
+                </ui:Label>
+                <ui:Button text="Map" name="base-screen__map" class="info-text" style="width: 43px; align-self: flex-start; -unity-text-auto-size: best-fit 10px 100px; position: absolute;"/>
+            </ui:VisualElement>
+            <Bindings>
+                <ui:DataBinding property="style.display" data-source-path="IsBaseScreenShown" binding-mode="ToTarget" source-to-ui-converters="Display"/>
+            </Bindings>
+        </ui:VisualElement>
+        <ui:VisualElement name="map-screen" picking-mode="Ignore" class="screen" style="display: none;">
+            <ui:Button text="Close" name="map-screen__close" class="info-text" style="width: 54px; align-self: flex-start; -unity-text-auto-size: best-fit 10px 100px;"/>
+            <Bindings>
+                <ui:DataBinding property="style.display" data-source-path="IsMapScreenShown" binding-mode="ToTarget" source-to-ui-converters="Display"/>
+            </Bindings>
+        </ui:VisualElement>
+        <ui:VisualElement name="inventory-screen" picking-mode="Ignore" class="screen" style="display: none;">
+            <ui:Button text="Close" name="inventory-screen__close" class="info-text" style="width: 54px; align-self: flex-end; -unity-text-auto-size: best-fit 10px 100px;"/>
+            <Bindings>
+                <ui:DataBinding property="style.display" data-source-path="IsInventoryScreenShown" binding-mode="ToTarget" source-to-ui-converters="Display"/>
+            </Bindings>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

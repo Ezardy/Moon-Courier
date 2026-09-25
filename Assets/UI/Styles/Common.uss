@@ -1,0 +1,15 @@
+:root {
+}
+
+.info-text {
+    -unity-font-definition: url("project://database/Assets/Fonts/Press%20Start%202P/PressStart2P-Regular.ttf?fileID=12800000&guid=9025cf4688eb97e49b4afd4f38db0b1e&type=3#PressStart2P-Regular");
+    -unity-text-align: middle-center;
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,20 @@
+{
+    "name": "Aniki.Inventory",
+    "rootNamespace": "Aniki.Inventory",
+    "references": [
+        "GUID:041e0704a7752b64094259dfbe1c0288",
+        "GUID:4ecf315b3d7c39c4da7a7009c0bfc7c7",
+        "GUID:7740292706cc9e84d8c4306708e8a2ea",
+        "GUID:4965e8ce8c6798b45976ba2dc072b2bf",
+        "GUID:f7c113b66ff963247a2fdad952ff86a3"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
